@@ -17,15 +17,8 @@ var Sign=document.getElementById("sign")
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>`;
     } 
-  //    else if(Email == false&& password ==false){
-  //     console.log("not found")
-  //     text.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size=10px">
-  //   <p >Data Doesnt Match</p>
-  //   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  // </div>`
-  //    }
-     
-  else{
+
+  else {
   for (var i = 1; i <= localStorage.length; i++)
   {
     var ussser = (localStorage.getItem(i));
@@ -37,26 +30,33 @@ var Sign=document.getElementById("sign")
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>`;
           sessionStorage.setItem("Email",Email)
+          setTimeout(function(){
+            window.location.href="../html/home.html"
+          },3000)
        
 
     }
+    else {
+
+      text.innerHTML = `<div class="alert alert-danger alert-dismissible fade show w-10" role="alert">
+            <P>Wrong Data</P>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>`;
+    }
   }
-          setTimeout(function(){
-            window.location.href="../html/home.html"
-          },5000)
-          // login.innerHTML="Welcome"
-          // Sign.innerHTML=""
           
+         
         
 
         
       }
+    }
     
 
 
       
       
-      }
+      
       
       
     
